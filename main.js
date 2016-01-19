@@ -1,35 +1,86 @@
-var victimNum = prompt("How many disaster victims would you like to register?")
 
-var victimNames = [];
-var victimNumbers = [];
-var victimStreets = [];
 
-for(var i = 0; i < victimNum; i++) {
-	victimNames.push(prompt("What is their name?"));
-	victimNumbers.push(prompt("What is their phone number?"));
-	victimStreets.push(prompt("What is their address?"));
+// var victimNum = prompt("How many disaster victims would you like to register?")
+
+// var victimInfo = [];
+
+// var person = function(name, number, address) {
+// 	this.name = name;
+// 	this.number = number;
+// 	this.address = address;
+// }
+
+// for(var i = 0; i < victimNum; i++) {
+// 	var v = prompt("What is their name?");
+// 	var n = prompt("What is their number?");
+// 	var a = prompt("What is their address?");
+// 	victimInfo.push(new person(v, n, a));
+// }
+
+
+// var volNum = prompt("How many disaster volunteers would you like to register?")
+
+// var volInfo = [];
+
+// var person = function(name, number, address) {
+// 	this.name = name;
+// 	this.number = number;
+// 	this.address = address;
+// }
+
+// for(var i = 0; i < volNum; i++) {
+// 	var v = prompt("What is their name?");
+// 	var n = prompt("What is their number?");
+// 	var a = prompt("What is their address?");
+// 	volInfo.push(new person(v, n, a));
+// }
+
+
+// alert("There are " + victimNum + " victims in need of disaster relief, and " + volNum + " \n volunteers who can help. The victims names are " + victimInfo.name + ". The volunteers' names \n are " + volInfo.name);
+
+
+
+
+
+
+
+
+var victimInfo = [];
+
+var person = function(name, number, address) {
+	this.name = name;
+	this.number = number;
+	this.address = address;
 }
 
-console.log(victimNames);
-console.log(victimNumbers);
-console.log(victimStreets);
+var volInfo = [];
 
-
-
-var volunteerNum = prompt("How many disaster volunteers would you like to register?")
-
-var volunteerNames = [];
-var volunteerNumbers = [];
-var volunteerStreets = [];
-
-for(var i = 0; i < volunteerNum; i++) {
-	volunteerNames.push(prompt("What is their name?"));
-	volunteerNumbers.push(prompt("What is their phone number?"));
-	volunteerStreets.push(prompt("What is their address?"));
+var person = function(name, number, address) {
+	this.name = name;
+	this.number = number;
+	this.address = address;
 }
 
-console.log(volunteerNames);
-console.log(volunteerNumbers);
-console.log(volunteerStreets);
 
-alert("There are " + victimNum + " victims in need of disaster relief, and " + volunteerNum + " \n volunteers who can help. The victims names are " + victimNames.sort() + ". The volunteers' names \n are " + volunteerNames.sort());
+function x() { 
+	var p = confirm("Would you like to enter information on a disaster victim?");
+	if (p == true) {
+	var v = prompt("What is their name?");
+	var n = prompt("What is their number?");
+	var a = prompt("What is their address?");
+	victimInfo.push(new person(v, n, a));
+	x();
+} else if (p !== true) {
+	function g() { 
+		var y = confirm("Would you like to enter volunteer information?"); }
+			if (y) {
+				var v = prompt("What is their name?");
+				var n = prompt("What is their number?");
+				var a = prompt("What is their address?");
+				volInfo.push(new person(v, n, a)); }
+				g();
+			} else { console.log("Done.");
+		}
+			}
+		
+		x();
